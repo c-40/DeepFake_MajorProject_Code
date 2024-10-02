@@ -1,0 +1,203 @@
+/* Resetting the default box model and margin/padding */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Styling the body to center the content and set a background gradient */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to right, #14111b, #11141a);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #fff;
+    transition: background 0.5s ease-in-out;
+}
+
+/* Styling the container with rounded corners, shadow, and padding */
+.container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    width: 900px;
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Adding a smooth fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Styling the main heading with a slight shadow */
+h1 {
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+    letter-spacing: 1px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+    animation: slideDown 1s ease-in-out;
+}
+
+/* Slide-down animation for the heading */
+@keyframes slideDown {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Setting up flexbox for videos to align side by side */
+.video-section {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    margin-bottom: 20px;
+}
+
+/* Centering the video titles and adding space */
+.video-container {
+    flex: 1;
+    text-align: center;
+    background-color: #f7f9fc;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+/* On hover, the video container grows slightly to add interactivity */
+.video-container:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Styling the video section titles */
+h3 {
+    color: #333;
+    margin-bottom: 10px;
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+/* Styling the video elements with rounded corners and a subtle shadow */
+video {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    border: 2px solid #ddd;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+/* Add shadow effect on hover for videos */
+video:hover {
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Styling the result section with a slight margin and font improvements */
+#output {
+    margin-top: 30px;
+    font-size: 1.2rem;
+    color: #444;
+}
+
+/* Making the detection result bold and dynamic */
+#detection-result {
+    font-weight: bold;
+    color: #ff4b5c;
+    font-size: 1.5rem;
+    animation: pulse 1.5s infinite;
+}
+
+/* Adding a pulse animation for the detection result */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.original-user-details{
+    color: #11141a;
+    word-spacing: 1mm;
+}
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Full height of the viewport */
+    background-image: url('https://source.unsplash.com/1600x900/?video,technology'); /* Dynamic background image */
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    color: white;
+    padding: 20px;
+    overflow: hidden; /* Ensures no overflow */
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay for text visibility */
+    z-index: 1; /* Overlay should be behind the text */
+}
+
+.intro-text {
+    position: relative; /* Position relative to the hero for layering */
+    z-index: 2; /* Ensures text is above the overlay */
+    text-align: center;
+    background: rgba(0, 0, 0, 0.6); /* Slightly darker background */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    animation: fadeIn 2s; /* Adds fade-in effect */
+}
+
+.intro-text h2 {
+    font-size: 2.5em; /* Larger font size for the heading */
+    margin-bottom: 10px; /* Space below heading */
+}
+
+.intro-text p {
+    font-size: 1.2em; /* Larger font size for the paragraph */
+    margin-bottom: 20px; /* Space below paragraph */
+}
+
+/* Optional: Button styling */
+.intro-text button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.intro-text button:hover {
+    background-color: #0056b3;
+}

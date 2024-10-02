@@ -1,0 +1,369 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to right, #14111b, #11141a);
+    color: #fff;
+    transition: background 0.5s ease-in-out;
+    overflow: hidden; /* Hide overflow for particles */
+}
+
+/* Header Styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 10;
+}
+
+nav {
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 8px 15px;
+    border: 2px solid transparent;
+    transition: border 0.3s;
+}
+
+nav ul li a:hover {
+    border: 2px solid #fff;
+}
+
+h1 {
+    margin-left: 20px; /* Space between nav and title */
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Full height of the viewport */
+    background-image: url('https://source.unsplash.com/1600x900/?video,technology'); /* Dynamic background image */
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    text-align: center;
+    color: white;
+    padding: 20px;
+}
+
+/* Add Sparkling Light Elements */
+@keyframes sparkle {
+    0%, 100% {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: translateY(-10px) scale(1.5);
+        opacity: 0.6;
+    }
+}
+
+.light-sparkles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.light-sparkles .sparkle {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    width: 5px;
+    height: 5px;
+    animation: sparkle 2s infinite ease-in-out;
+    opacity: 0;
+}
+
+/* Stars for Galaxy Effect */
+.stars {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    background: transparent;
+}
+
+.stars .star {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: white;
+    border-radius: 50%;
+    animation: twinkle 4s infinite ease-in-out;
+}
+
+@keyframes twinkle {
+    0% { opacity: 0; transform: scale(1); }
+    50% { opacity: 1; transform: scale(1.5); }
+    100% { opacity: 0; transform: scale(1); }
+}
+
+/* Intro Text Styles */
+.intro-text {
+    background: rgba(0, 0, 0, 0.6); /* Darker background for better readability */
+    padding: 20px;
+    border-radius: 10px;
+    animation: fadeIn 2s;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    z-index: 2; /* Ensure it appears above background */
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Main Container Styles */
+.container {
+    text-align: center;
+    max-width: 800px;
+    padding: 40px;
+    margin: 100px auto; /* Center the container */
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    position: relative;
+}
+
+/* Container Title */
+.container h2 {
+    margin-bottom: 15px;
+    color: #ffcc00; /* Highlight color for headings */
+}
+
+/* Container Paragraphs */
+.container p {
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+/* Button Styles */
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.7);
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    margin-top: 20px; /* Space above the footer */
+}
+
+footer p {
+    color: #ccc; /* Slightly lighter footer text */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column; /* Stack nav and title on smaller screens */
+        align-items: flex-start;
+    }
+
+    h1 {
+        margin-left: 0; /* Remove margin for smaller screens */
+    }
+
+    nav ul {
+        flex-direction: column; /* Stack navigation items */
+        margin-top: 10px;
+    }
+
+    nav ul li {
+        margin: 5px 0; /* Add vertical spacing between nav items */
+    }
+
+    .hero {
+        min-height: 70vh; /* Adjust hero height on small screens */
+    }
+
+    .container {
+        padding: 20px;
+        margin: 50px auto; /* Adjust margin for smaller screens */
+    }
+}
+
+/* Additional Styles */
+.hidden {
+    display: none;
+}
+
+#upload-section {
+    margin-top: 20px;
+}
+
+#upload-status {
+    color: #ffcc00;
+    margin-top: 10px;
+}
+
+/* General Text Styling */
+.info-text {
+    font-size: 18px;
+    line-height: 1.7;
+    color: #e0e0e0;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    margin-top: 20px;
+    max-width: 900px;
+    text-align: justify;  /* Justify text */
+    font-family: 'Arial', sans-serif;
+}
+
+/* Styling for Important Percentages and Data */
+.important {
+    color: #ffcc00;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+/* Highlight Key Features */
+.highlight {
+    color: #00cfff;
+    font-weight: bold;
+}
+
+/* Add Smooth Transitions to Hover Effects */
+.info-text:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+    transition: background-color 0.3s ease;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .info-text {
+        font-size: 16px;
+        padding: 15px;
+    }
+}
+/* Input Styles */
+input[type="text"]
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 2px solid #00cfff; /* Light blue border */
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.2); /* Light background */
+    color: #fff; /* White text color */
+    transition: border 0.3s;
+}
+input[type="text"]
+input[type="email"]:focus,
+input[type="password"]:focus {
+    border-color: #fff; /* Change border color on focus */
+}
+
+/* Container Styles */
+.container {
+    position: relative;
+    text-align: center;
+    max-width: 400px; /* Reduced width for login/register forms */
+    padding: 40px;
+    margin: 100px auto; /* Center the container */
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Button Styles */
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Link Styles */
+p {
+    margin-top: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: #00cfff; /* Link color */
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #fff; /* Change link color on hover */
+}
+/* Input Styles */
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 2px solid #00cfff; /* Light blue border */
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.2); /* Light background */
+    color: #fff; /* White text color */
+    transition: border 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+    border-color: #fff; /* Change border color on focus */
+}

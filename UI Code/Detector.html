@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deepfake Detection</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Deepfake Detection</h1>
+
+
+        <div class="video-section">
+            <!-- Uploaded Video Section -->
+            <div class="video-container">
+                <h3>Uploaded Video</h3>
+                <video id="uploaded-video-preview" controls>
+                    <!-- No src provided, to be dynamically loaded -->
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+
+            <!-- Original Video Section -->
+            <div class="video-container">
+                <h3>Original Video</h3>
+                <video id="original-video-preview" controls>
+                    <!-- No src provided, to be dynamically loaded -->
+                    Your browser does not support the video tag.
+                </video>
+                <!-- Original Video User Details -->
+                <div class="original-user-details">
+                    <h4>Original Video Uploader Details</h4>
+                    <p><strong>Name:</strong> Jane Smith</p>
+                    <p><strong>Date of Original Upload:</strong> 2024-09-15</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="output">
+            <p>Deepfake Detection Result: <span id="detection-result">Detected as Fake</span></p>
+        </div>
+
+        <div class="notification">
+            <p><strong>Important Notice:</strong> The video you uploaded appears to be a deepfake. Misuse of media can result in legal consequences. Please ensure you are not using altered content inappropriately.</p>
+        </div>
+    </div>
+</body>
+</html>

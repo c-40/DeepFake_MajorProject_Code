@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deepfake Detection - Home</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script> <!-- Link to JavaScript file -->
+</head>
+<body>
+    <header>
+        <h1>Deepfake Detection</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="registrationandlogin.html">Register/Login</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        
+    </header>
+
+    <div class="hero">
+        <div class="hero-overlay"></div> <!-- Overlay for better text visibility -->
+        <div class="intro-text">
+            <h2>Detect Deepfakes with Confidence</h2>
+            <p class="info-text">Ensure the authenticity of your videos with our <span class="highlight">cutting-edge AI technology</span> <span class="important"></span> <span class="highlight">fast, reliable, and highly accurate detection</span>. Using advanced machine learning models trained on thousand of videos, our platform boasts an accuracy rate of <span class="important">84%</span>. Our <span class="highlight">real-time detection</span> ensures you get instant results without delays, while <span class="highlight">strict privacy protocols</span> guarantee that your data remains secure. Protect your content from manipulation and misinformation, safeguard your digital presence from potential threats, and seamlessly integrate .</p>
+        </div>
+        <div class="stars">
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+        </div>
+        <div class="light-sparkles">
+            <div class="sparkle" style="top: 10%; left: 15%; animation-delay: 0s;"></div>
+            <div class="sparkle" style="top: 30%; left: 60%; animation-delay: 0.5s;"></div>
+            <div class="sparkle" style="top: 50%; left: 20%; animation-delay: 1s;"></div>
+            <div class="sparkle" style="top: 70%; left: 75%; animation-delay: 1.5s;"></div>
+            <div class="sparkle" style="top: 20%; left: 90%; animation-delay: 2s;"></div>
+            <div class="sparkle" style="top: 10%; left: 15%; animation-delay: 0s;"></div>
+            <div class="sparkle" style="top: 30%; left: 60%; animation-delay: 0.5s;"></div>
+            <div class="sparkle" style="top: 50%; left: 20%; animation-delay: 1s;"></div>
+            <div class="sparkle" style="top: 70%; left: 75%; animation-delay: 1.5s;"></div>
+            <div class="sparkle" style="top: 20%; left: 90%; animation-delay: 2s;"></div>
+        </div>
+        
+    </div>
+
+    <div class="container">
+        <h2>About Deepfake Detection</h2>
+        <p>This website helps in detecting deepfake videos. Please upload a video to check its authenticity.</p>
+        <!-- Hidden upload form that becomes visible on button click -->
+        <div id="upload-section" class="hidden">
+            <form id="video-upload-form" enctype="multipart/form-data">
+                <input type="file" id="video-file" accept="video/*" required>
+                <button type="submit">Submit Video</button>
+            </form>
+            <p id="upload-status"></p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Deepfake Detection. All rights reserved.</p>
+    </footer>
+</body>
+</html>
